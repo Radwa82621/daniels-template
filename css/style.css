@@ -1,0 +1,412 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --light: #999999;
+    --dark: #343434;
+    --normal: #748182;
+    --bg: #f7f7f7;
+}
+
+.dark-var {
+    color: var(--dark);
+}
+
+body,
+html {
+    scroll-behavior: smooth;
+    background-color: var(--bg);
+    color: var(--normal);
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.logo {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* nav section  */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#navbar.navbar-brand {
+    font-size: 18px;
+    font-weight: 600;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#navbar nav ul {
+    gap: 20px;
+    font-size: 1rem;
+}
+
+.nav-link.active:before {
+    content: '';
+    width: 40px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+}
+
+/* nav section */
+
+/* header section */
+#home {
+    background-image: url(../img/img/bg.jpg);
+    background-size: cover;
+}
+
+#home:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    opacity: .65;
+    z-index: 1;
+}
+
+#home h5 {
+    font-size: 50px;
+}
+
+#home h1 {
+    font-size: 44px;
+}
+
+.icon-container {
+    width: 35px;
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* header section */
+/* about section */
+#about {
+    background-color: #fff;
+}
+
+.hero-img {
+    padding: 0 0 0 30px;
+}
+
+.hero-img:after {
+    content: '';
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: 0px;
+    bottom: -30px;
+    background-image: url(../img/img/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+.subtitle {
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: var(--light);
+}
+
+#about h3 {
+    font-weight: 800;
+    margin-bottom: 5px;
+    font-size: 30px;
+    color: var(--dark);
+}
+
+.progress {
+    height: 25px;
+}
+
+.progress-bar {
+    background-color: #1c1c1c;
+}
+
+#about .buttons button {
+    transition: all 1s;
+}
+
+#about .buttons .dark a {
+    color: #fff;
+}
+
+#about .buttons .dark:hover {
+    background-color: #fff;
+}
+
+#about .buttons .dark:hover a {
+    color: var(--dark);
+}
+
+#about .buttons .light a {
+    color: var(--dark);
+}
+
+.light:hover {
+    background: #1c1c1c;
+}
+
+#about .buttons .light:hover a {
+    color: #eee;
+}
+
+/* about section */
+/* services section */
+#services {
+    background-color: var(--bg);
+}
+
+.section-head h3 {
+    font-size: 40px;
+    color: var(--dark);
+}
+
+.section-head h3:after {
+    content: '';
+    width: 100%;
+    height: 30px;
+    background-image: url(../img/img/dots.png);
+    background-repeat: repeat;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    z-index: -1;
+}
+
+.services-icon-container {
+    width: 70px;
+    height: 70px;
+    background-color: var(--bg);
+    color: var(--dark);
+}
+
+#services .inner {
+    transition: all 1s;
+}
+
+#services .inner:hover .services-icon-container {
+    background-color: #1c1c1c;
+    color: #fff;
+    transition: all 1s;
+}
+
+/* works section */
+
+#work .nav-link {
+    color: #222;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+
+}
+
+#work .nav-link.active::before {
+    content: '';
+    width: 70%;
+    height: 2px;
+    background: #222;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+}
+
+.caption-icon-container {
+    width: 30px;
+    height: 30px;
+    background-color: #111;
+    transition: all 0.5s;
+}
+
+.caption-icon-container a {
+    color: #fff;
+}
+
+.caption-icon-container:hover {
+    background-color: #fff;
+    border: #111 1px solid;
+}
+
+.caption-icon-container:hover a {
+    color: #111;
+}
+
+.img-caption {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background: rgba(255, 255, 255, 0.95);
+    opacity: 0;
+    transition: all .5s;
+    z-index: 4;
+    transform: translateY(2px);
+}
+
+.img-caption:hover {
+    opacity: 1;
+}
+
+.caption-icons {
+    position: relative;
+    transform: translateY(15px);
+    transition: all 0.5s 0.25s;
+}
+
+.img-caption:hover .caption-icons {
+    transform: translateY(0);
+
+}
+
+.img-caption h6 {
+    position: relative;
+    transform: translateY(-15px);
+    transition: all 0.5s 0.25s;
+    color: #111;
+}
+
+.img-caption:hover h6 {
+    transform: translateY(0);
+
+}
+
+.v-middle {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translate(0%, -50%);
+}
+
+/* work section */
+/* client section */
+#client .client-img-container {
+    width: 90px;
+    height: 90px;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #d6d6d6;
+    transition: all .6s ease;
+}
+
+.carousel-indicators [data-bs-target]:hover {
+    background-color: #869791;
+}
+
+.carousel-indicators [data-bs-target].active {
+    opacity: 1;
+    background-color: #869791;
+}
+
+/* client section */
+/* blog section */
+#blog .blog-item h6 a {
+    font-size: 12px;
+    font-weight: 600;
+    color: #888;
+}
+
+#blog .blog-item h3 a {
+    font-size: 20px;
+    font-weight: 800;
+    color: #343434;
+}
+
+#blog .blog-item span a {
+    font-size: 14px;
+    color: #343434;
+    position: relative;
+}
+
+#blog .blog-item span a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #343434;
+    bottom: -5px;
+}
+
+#blog .blog-item figure {
+    transition: all 1s;
+}
+
+#blog .blog-item figure:hover img {
+    transform: scale(120%);
+    transition: all 1s;
+}
+
+/* blog section */
+/* contact section*/
+
+.contact-icon-container {
+    width: 60px;
+    height: 60px;
+    background-color: var(--bg);
+    color: var(--dark);
+}
+
+.citem {
+    transition: all 0.5s;
+}
+
+.citem:hover .contact-icon-container {
+    background-color: #1c1c1c;
+    color: #fff;
+    transition: all 0.5s;
+}
+
+.form-control {
+    background-color: #f4f4f4;
+
+}
+
+#contact button {
+    transition: all .5s;
+}
+
+#contact button a {
+    color: #fff;
+}
+
+#contact button:hover a {
+    color: #343434;
+}
+
+#contact button:hover {
+    border: 1px solid #343434;
+    background-color: #fff;
+}
+
+/* contact section*/
+#footer {
+    background-color: #1c1c1c;
+    color: #748182;
+}
+
+/* footer section */
